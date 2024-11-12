@@ -35,7 +35,7 @@ export default function AIChat() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:3500/chat', {
+      const response = await fetch('https://backend-analitica.onrender.com/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

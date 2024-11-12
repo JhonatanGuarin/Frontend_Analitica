@@ -31,7 +31,7 @@ export default function Home() {
             <Image 
               src="/images/dashboard.png" 
               alt="Vista previa del dashboard"
-              className="rounded-lg w-full"
+              className="rounded-lg w-full h-48 object-contain"
               width={400}
               height={200}
             />
@@ -55,9 +55,9 @@ export default function Home() {
           </CardHeader>
           <CardContent className="space-y-4">
             <Image 
-              src="/placeholder.svg" 
+              src="/images/ia.png" 
               alt="Vista previa del asistente virtual"
-              className="rounded-lg w-full"
+              className="rounded-lg w-full h-48 object-contain"
               width={400}
               height={200}
             />
