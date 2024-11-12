@@ -15,7 +15,6 @@ export default function Footer() {
             <h3 className="font-semibold mb-4 text-gray-900 dark:text-gray-100">Enlaces Rápidos</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/acerca" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-foreground transition-colors">Acerca del Proyecto</Link></li>
-              <li><Link href="/metodologia" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-foreground transition-colors">Metodología</Link></li>
               <li><Link href="/contacto" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary-foreground transition-colors">Contacto</Link></li>
             </ul>
           </div>
