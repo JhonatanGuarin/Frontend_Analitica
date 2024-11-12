@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="text-sm text-muted-foreground dark:text-gray-400 mb-4">
               Email: <br />
               jhonatan.guarin02@uptc.edu.co<br />
-              andres.sanabria@uptc.edu.co<br />
+              andres.sanabria02@uptc.edu.co<br />
               <br />
               Tel: 3219481516
             </p>
