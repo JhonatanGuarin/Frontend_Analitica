@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Button } from '@/components/ui/button'
 import { ArrowRight, BarChart2, MessageSquare } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -27,10 +28,12 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <img 
+            <Image 
               src="/images/dashboard.png" 
               alt="Vista previa del dashboard"
               className="rounded-lg w-full"
+              width={400}
+              height={200}
             />
             <Button asChild className="w-full">
               <Link href="/dashboard">
@@ -51,10 +54,12 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <img 
-              src="/placeholder.svg?height=200&width=400" 
+            <Image 
+              src="/placeholder.svg" 
               alt="Vista previa del asistente virtual"
               className="rounded-lg w-full"
+              width={400}
+              height={200}
             />
             <Button asChild className="w-full">
               <Link href="/asistente">

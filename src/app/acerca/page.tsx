@@ -23,7 +23,7 @@ export default function AcercaDe() {
         </CardHeader>
         <CardContent className="text-lg">
           <p>
-            "Más Allá de los Números" es una iniciativa que busca analizar y comprender
+            &quot;Más Allá de los Números&quot; es una iniciativa que busca analizar y comprender
             en profundidad los patrones y tendencias en casos de delitos sexuales y su
             procesamiento en el sistema judicial colombiano. Nuestro objetivo es contribuir
             a la mejora de las políticas públicas y la administración de justicia, motivando
