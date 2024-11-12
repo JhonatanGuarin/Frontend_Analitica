@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="space-y-12">
+    <div className="container mx-auto px-4 py-12 space-y-12">
       <section className="text-center space-y-4">
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl gradient-text">
           Más Allá de los Números
