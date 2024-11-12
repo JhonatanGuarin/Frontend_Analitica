@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Card, CardContent } from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import { Send } from 'lucide-react'
 import { ScrollArea } from "@/components/ui/scroll-area"
 
