@@ -23,8 +23,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-gray-900 dark:text-gray-100">Contacto</h3>
             <p className="text-sm text-muted-foreground dark:text-gray-400 mb-4">
-              Email: jhonatan.guarin02@uptc.edu.co <br />
-              Tel: (123) 456-7890
+              Email: <br />
+              - jhonatan.guarin02@uptc.edu.co <br />
+              - andres.sanabria@uptc.edu.co<br />
+              <br />
+              Tel: 3219481516
             </p>
 
           </div>
