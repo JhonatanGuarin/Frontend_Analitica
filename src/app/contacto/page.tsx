@@ -23,7 +23,7 @@ export default function Contacto() {
           </CardHeader>
           <CardContent>
             <p className="text-lg font-medium mb-4">jhonatan.guarin02@uptc.edu.co  </p>
-            <p className="text-lg font-medium mb-4">andres.sanabria@uptc.edu.co  </p>
+            <p className="text-lg font-medium mb-4">andres.sanabria02@uptc.edu.co  </p>
           </CardContent>
         </Card>
 
@@ -36,7 +36,7 @@ export default function Contacto() {
           </CardHeader>
           <CardContent>
             <p className="text-lg font-medium mb-4">3219481516</p>
-            <p className="text-lg font-medium mb-4">3219481516</p>
+            <p className="text-lg font-medium mb-4">3187481806</p>
           </CardContent>
         </Card>
 
