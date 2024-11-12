@@ -23,20 +23,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-gray-900 dark:text-gray-100">Contacto</h3>
             <p className="text-sm text-muted-foreground dark:text-gray-400 mb-4">
-              Email: info@masalladelosnumeros.com<br />
+              Email: jhonatan.guarin02@uptc.edu.co <br />
               Tel: (123) 456-7890
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary dark:hover:text-primary-foreground transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary dark:hover:text-primary-foreground transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary dark:hover:text-primary-foreground transition-colors">
-                <Instagram size={20} />
-              </a>
-            </div>
+
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-muted-foreground dark:text-gray-400">
