@@ -39,26 +39,6 @@ export default function DashboardPage() {
         </CardContent>
       </Card>
 
-      <section className="grid gap-6 md:grid-cols-3 mt-8">
-        <Card className="p-6">
-          <h3 className="font-semibold mb-2">Filtros Avanzados</h3>
-          <p className="text-sm text-muted-foreground">
-            Utiliza los filtros para analizar datos específicos según tus necesidades
-          </p>
-        </Card>
-        <Card className="p-6">
-          <h3 className="font-semibold mb-2">Exportación de Datos</h3>
-          <p className="text-sm text-muted-foreground">
-            Descarga los datos en diferentes formatos para un análisis más detallado
-          </p>
-        </Card>
-        <Card className="p-6">
-          <h3 className="font-semibold mb-2">Actualizaciones en Tiempo Real</h3>
-          <p className="text-sm text-muted-foreground">
-            Los datos se actualizan automáticamente para mantener la información al día
-          </p>
-        </Card>
-      </section>
     </div>
   )
 }

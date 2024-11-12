@@ -31,33 +31,11 @@ export default function AsistentePage() {
               <MessageSquare className="h-6 w-6 text-primary" />
               Chat Interactivo
             </CardTitle>
-            <CardDescription>
-              Realiza preguntas sobre el análisis y obtén respuestas detalladas
-            </CardDescription>
           </CardHeader>
           <CardContent>
             <AIChat />
           </CardContent>
         </Card>
-
-        <div className="grid gap-6 md:grid-cols-2 mt-8">
-          <Card className="p-6">
-            <h3 className="font-semibold mb-2">Preguntas Frecuentes</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• ¿Cómo se recopilan los datos?</li>
-              <li>• ¿Qué metodología se utiliza?</li>
-              <li>• ¿Cómo se garantiza la precisión?</li>
-            </ul>
-          </Card>
-          <Card className="p-6">
-            <h3 className="font-semibold mb-2">Temas Populares</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Estadísticas recientes</li>
-              <li>• Tendencias principales</li>
-              <li>• Análisis comparativo</li>
-            </ul>
-          </Card>
-        </div>
       </div>
     </div>
   )
