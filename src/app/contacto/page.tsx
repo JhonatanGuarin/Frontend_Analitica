@@ -1,6 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Mail, Phone, MapPin, ExternalLink, MessageCircle } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Contacto() {
   return (
