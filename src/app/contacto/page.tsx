@@ -70,7 +70,7 @@ export default function Contacto() {
           <div>
             <h3 className="font-semibold mb-2">¿Ofrecen presentaciones o charlas sobre sus hallazgos?</h3>
             <p className="text-sm text-muted-foreground">
-              Sí, regularmente organizamos presentaciones y webinars para compartir nuestros hallazgos. Suscríbete a nuestro boletín para mantenerte informado.
+            Aún no hemos organizado presentaciones o charlas sobre nuestros hallazgos, pero estamos abiertos a hacerlo en el futuro si surge la oportunidad.
             </p>
           </div>
         </CardContent>
