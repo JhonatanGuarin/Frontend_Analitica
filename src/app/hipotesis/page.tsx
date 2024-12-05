@@ -97,9 +97,9 @@ const hipotesis = [
   {
     id: 6,
     texto: "En el año de denuncia 2022, los delitos sexuales contra adultos mayores representaron el 10% del total de víctimas, mientras que en 2024 esta cifra aumentó al 15%.",
-    modelo: "Análisis de tendencias",
-    conclusion: "La hipótesis se confirma parcialmente. Se observa un aumento, pero no llega al 15% en 2024.",
-    imagenes: ["/placeholder.svg?height=300&width=400"]
+    modelo: "Prueba de chi-cuadrado",
+    conclusion: "Esto significa que existe una asociación significativa entre el año de denuncia y el grupo etario (adultos mayores de 60 y no adultos mayores de 60). En 2022, la proporción de víctimas adultos mayores fue significativamente mayor de lo esperado (677 casos observados frente a 549.20 casos esperados), mientras que en 2024, la proporción de víctimas adultos mayores fue significativamente menor de lo esperado (296 casos observados frente a 423.80 casos esperados). Estos resultados indican que la distribución de víctimas adultos mayores no se mantiene constante entre los años analizados, sugiriendo posibles diferencias en la incidencia, denuncia o resolución de casos que afectan a este grupo etario.",
+    imagenes: ["/images/h6-1.png", "/images/h6-2.png", "/images/h6.png",]
   },
   {
     id: 7,
@@ -111,23 +111,23 @@ const hipotesis = [
   {
     id: 8,
     texto: "Entre el 2020 y 2024 el delito \"ACTOS SEXUALES CON MENOR DE CATORCE AÑOS\" es mayor en comparación con el delito \"PORNOGRAFIA CON MENORES\".",
-    modelo: "Análisis comparativo de frecuencias",
+    modelo: "Test de Chi-cuadrado",
     conclusion: "La hipótesis se confirma. Los actos sexuales con menores de catorce años presentan una frecuencia significativamente mayor.",
-    imagenes: ["/placeholder.svg?height=300&width=400"]
+    imagenes: ["/images/h8.png", "/images/h8-1.png"]
   },
   {
     id: 9,
     texto: "En los últimos 5 años Bogotá D. C. ha tenido menos denuncias de víctimas que el departamento de Antioquia.",
-    modelo: "Análisis geoespacial y series temporales",
-    conclusion: "La hipótesis se rechaza. Bogotá D.C. presenta un número mayor de denuncias que Antioquia en el período analizado.",
-    imagenes: ["/placeholder.svg?height=300&width=400"]
+    modelo: "Análisis Descriptivo",
+    conclusion: "Se concluye que Bogotá D.C. ha tenido más víctimas que Antioquia en los últimos cinco años. La hipótesis \"Bogotá D.C. ha tenido menos víctimas que Antioquia\" no se cumple, ya que el número total de víctimas en Bogotá D.C. fue mayor que en Antioquia.",
+    imagenes: ["/images/h9.png", "/images/h9-1.png"]
   },
   {
     id: 10,
     texto: "El número de víctimas del año denuncia en 2024 con estado \"Activo\" aumentó en un 10% en comparación con el año denuncia 2023",
-    modelo: "Análisis de crecimiento porcentual",
-    conclusion: "La hipótesis se confirma. Se observa un aumento del 10.5% en el número de víctimas con estado \"Activo\" en 2024 comparado con 2023.",
-    imagenes: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"]
+    modelo: "Comparación de Proporciones",
+    conclusion: " El aumento del 14.26% en el estado \"Activo\" en 2024, frente al 2023, no solo cumple la hipótesis planteada, sino que sugiere que el sistema judicial o la cantidad de procesos en curso están incrementando.",
+    imagenes: ["/images/h10.png"]
   }
 ]
 
