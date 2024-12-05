@@ -3,10 +3,10 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Lightbulb, BarChartIcon as ChartBar, CheckCircle } from 'lucide-react'
 import useEmblaCarousel from 'embla-carousel-react'
 
 const ChartCarousel = ({ images }: { images: string[] }) => {
@@ -17,16 +17,17 @@ const ChartCarousel = ({ images }: { images: string[] }) => {
 
   return (
     <div className="relative max-w-8xl mx-auto">
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden rounded-lg shadow-lg" ref={emblaRef}>
         <div className="flex">
           {images.map((src, index) => (
             <div className="flex-[0_0_100%] min-w-0" key={index}>
-              <div className="relative h-[600px] w-full">
+              <div className="relative h-[600px] w-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
                 <Image
                   src={src}
                   alt={`Gráfica ${index + 1}`}
                   fill
                   style={{ objectFit: 'contain' }}
+                  className="p-4"
                 />
               </div>
             </div>
@@ -38,7 +39,7 @@ const ChartCarousel = ({ images }: { images: string[] }) => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800"
             onClick={scrollPrev}
           >
             <ChevronLeft className="h-4 w-4" />
@@ -46,7 +47,7 @@ const ChartCarousel = ({ images }: { images: string[] }) => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 dark:bg-gray-800/80 hover:bg-white dark:hover:bg-gray-800"
             onClick={scrollNext}
           >
             <ChevronRight className="h-4 w-4" />
@@ -145,32 +146,48 @@ export default function HipotesisPage() {
       </section>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid grid-cols-5 sm:grid-cols-10 gap-2">
+        <TabsList className="flex w-full p-1 bg-muted rounded-full">
           {hipotesis.map((h) => (
-            <TabsTrigger key={h.id} value={h.id.toString()} className="text-xs sm:text-sm">
+            <TabsTrigger 
+              key={h.id} 
+              value={h.id.toString()} 
+              className="flex-1 rounded-full px-4 py-2 text-sm transition-all text-gray-700 dark:text-gray-300 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+            >
               {h.id}
             </TabsTrigger>
           ))}
         </TabsList>
         {hipotesis.map((h) => (
           <TabsContent key={h.id} value={h.id.toString()}>
-            <Card>
-              <CardHeader>
-                <CardTitle>Hipótesis {h.id}</CardTitle>
-                <CardDescription>{h.texto}</CardDescription>
+            <Card className="overflow-hidden border-none shadow-lg">
+              <CardHeader className="bg-gradient-to-r from-primary to-primary-foreground">
+                <CardTitle className="text-2xl flex items-center gap-2 text-black dark:text-white">
+                  <Lightbulb className="h-6 w-6" />
+                  Hipótesis {h.id}
+                </CardTitle>
+                <CardDescription className="text-black/90 dark:text-white/90 text-lg">{h.texto}</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="p-6 space-y-6 bg-white dark:bg-gray-800">
                 <div>
-                  <h3 className="text-lg font-semibold mb-2">Gráfica{h.imagenes.length > 1 ? 's' : ''}</h3>
+                  <h3 className="text-xl font-semibold mb-4 flex items-center gap-2 text-gray-800 dark:text-white">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    Gráfica{h.imagenes.length > 1 ? 's' : ''}
+                  </h3>
                   <ChartCarousel images={h.imagenes} />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Modelo Utilizado</h3>
-                  <Badge variant="secondary">{h.modelo}</Badge>
+                <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2 text-gray-800 dark:text-white">
+                    <ChartBar className="h-5 w-5 text-primary" />
+                    Modelo Utilizado
+                  </h3>
+                  <Badge variant="secondary" className="text-lg py-1 px-3">{h.modelo}</Badge>
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Conclusión</h3>
-                  <p className="text-muted-foreground">{h.conclusion}</p>
+                <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-2 flex items-center gap-2 text-gray-800 dark:text-white">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    Conclusión
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">{h.conclusion}</p>
                 </div>
               </CardContent>
             </Card>
