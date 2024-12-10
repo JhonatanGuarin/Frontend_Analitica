@@ -38,7 +38,7 @@ export default function AIChat() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('http://localhost:4000/api/query', {
+      const response = await fetch('https://backend-analitica.onrender.com/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
