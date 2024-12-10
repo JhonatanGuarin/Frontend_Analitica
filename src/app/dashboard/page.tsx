@@ -35,7 +35,7 @@ export default function DashboardPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <PowerBIDashboard url="https://app.powerbi.com/view?r=eyJrIjoiYzkxYTZkN2MtNmM5YS00ZmVkLWEzZDItNGRiYzY5MjZhNTFkIiwidCI6ImM2ZTIwZTQzLWNmY2QtNDg5ZS1hMjY2LTQxOGY1NmRmMTI0YyIsImMiOjR9&pageName=69ddf4870836b712547b" />
+          <PowerBIDashboard url="https://app.powerbi.com/view?r=eyJrIjoiNDM5YmU5YzItNDZmOC00OWIwLWJhYjctOTIzZjgyZjhiNmE2IiwidCI6ImM2ZTIwZTQzLWNmY2QtNDg5ZS1hMjY2LTQxOGY1NmRmMTI0YyIsImMiOjR9&pageName=69ddf4870836b712547b" />
         </CardContent>
       </Card>
 

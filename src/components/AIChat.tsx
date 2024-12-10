@@ -12,6 +12,10 @@ type Message = {
   content: string
 }
 
+interface AIResponse {
+  response: string;
+}
+
 export default function AIChat() {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
@@ -19,7 +23,6 @@ export default function AIChat() {
   const scrollAreaRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Scroll al fondo cuando se añaden nuevos mensajes
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
     }
@@ -35,29 +38,23 @@ export default function AIChat() {
     setIsLoading(true)
 
     try {
-      const response = await fetch('https://backend-analitica.onrender.com/chat', {
+      const response = await fetch('http://localhost:4000/api/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ prompt: input }),
+        body: JSON.stringify({ query: input }),
       })
 
       if (!response.ok) {
         throw new Error('Error en la respuesta del servidor')
       }
 
-      const data = await response.json()
+      const data: AIResponse = await response.json()
       
-      // Formatear la respuesta para mejor legibilidad
-      const formattedResponse = data.response
-        .replace(/\*\*/g, '') // Remover asteriscos
-        .replace(/\n\n/g, '\n') // Reducir espacios extra
-        .trim()
-
       const assistantMessage: Message = {
         role: 'assistant',
-        content: formattedResponse,
+        content: data.response,
       }
       setMessages(prev => [...prev, assistantMessage])
     } catch (error) {
@@ -77,7 +74,7 @@ export default function AIChat() {
         <div className="space-y-4">
           {messages.length === 0 && (
             <div className="text-center text-muted-foreground p-4">
-              ¡Hola! Estoy aquí para ayudarte con información sobre delitos sexuales y su prevención. 
+              ¡Hola! Estoy aquí para ayudarte con información sobre delitos y estadísticas. 
               ¿Qué te gustaría saber?
             </div>
           )}
@@ -129,3 +126,4 @@ export default function AIChat() {
     </Card>
   )
 }
+
