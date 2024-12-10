@@ -104,7 +104,7 @@ const hipotesis = [
   {
     id: 7,
     texto: "Se investigará si más del 50% de los casos denunciados en el año 2024 alcanzan la etapa de ejecución de penas.",
-    modelo: "Análisis de supervivencia",
+    modelo: "Prueba Z para proporciones",
     conclusion: "La hipótesis se rechaza. Menos del 50% de los casos denunciados en 2024 han alcanzado la etapa de ejecución de penas.",
     imagenes: ["/images/h7.png"]
   },
